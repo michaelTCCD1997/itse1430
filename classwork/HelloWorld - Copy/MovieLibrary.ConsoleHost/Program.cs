@@ -9,9 +9,6 @@ namespace MovieLibrary.ConsoleHost
     {
         //Entry point function
         static void Main ( string[] args )
-
-        static Movie movie = new Movie();
-
         {
             bool done = false;
 
@@ -29,7 +26,7 @@ namespace MovieLibrary.ConsoleHost
                 else
                     Console.WriteLine("Unknown option");
             } while (!done);
-    }
+        }
 
         private static void DeleteMovie ()
         {
@@ -41,7 +38,13 @@ namespace MovieLibrary.ConsoleHost
             Console.WriteLine("Not implemented");
         }
 
-
+        static string title;
+        static string description;
+        static int runLength;
+        static int releaseYear;
+        static double reviewRating;
+        static string rating;
+        static bool isClassic;
 
         static void AddMovie ()
         {
