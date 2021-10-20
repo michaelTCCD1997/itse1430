@@ -2,15 +2,15 @@
 
 namespace MichaelQuinlan.CharacterCreator.ConsoleHost
 {
-    class Program
+    class Character
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Select a character!  ");
         }
     }
 
-    static void AdeventureGame game = new Game ();
+    static void CharacterCreator character = new Character ();
 
     bool done = false;
 
@@ -23,14 +23,15 @@ namespace MichaelQuinlan.CharacterCreator.ConsoleHost
             if (choice == 'H')
                     Help ();
 
-            else if (choice == 'U')
-                    MoveUp ();
-            else if (choice == 'D')
-                    MoveDown ();
-            else if (choice == 'L')
-                    MoveLeft ();
+            else if (choice == 'C')
+                    Create ();
+            else if (choice == 'B')
+                    Build ();
             else if (choice == 'R')
-                    MoveRight ();
+                    Race ();
+            else if (choice == 'A')
+                    Attributes ();
+            
             Console.WriteLine("Unknown option");
 
         } while (!done) ;
@@ -41,11 +42,6 @@ namespace MichaelQuinlan.CharacterCreator.ConsoleHost
             return;
 
             Console.WriteLine("Not implemented");
-        }
-
-        static void roomNumber ( MoveUp, MoveDown, MoveLeft, MoveRight)
-        {
-            roomNumber = ReadString("You are currently in room number:  ", true)
         }
 
         private static bool HandleQuit ()
